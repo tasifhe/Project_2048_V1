@@ -40,11 +40,15 @@ public class GameControllerComp : MonoBehaviour
             
             GameObject tempFill = Instantiate(fillPrefab, allCells[whichSpawn]);
             Debug.Log(2);
+            Fill2048Comp tempFillComp = tempFill.GetComponent<Fill2048Comp>();
+            tempFillComp.FillValueUpdate(2);
         }
         else
         {
             GameObject tempFill = Instantiate(fillPrefab, allCells[whichSpawn]);
             Debug.Log(4);
+            Fill2048Comp tempFillComp = tempFill.GetComponent<Fill2048Comp>();
+            tempFillComp.FillValueUpdate(4);
         }
     }
 }
